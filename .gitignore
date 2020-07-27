@@ -1,2 +1,11 @@
 # Project exclude paths
 /out/
+/.idea/dataSources.xml
+/.idea/description.html
+/.idea/encodings.xml
+/.idea/misc.xml
+/.idea/modules.xml
+/Objektserialisierung.iml
+/.idea/project-template.xml
+/.idea/sqldialects.xml
+/.idea/dictionaries/Yannick.xml
