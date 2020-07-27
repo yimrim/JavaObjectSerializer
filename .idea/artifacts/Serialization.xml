@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="Serialization">
-    <output-path>$PROJECT_DIR$/out/artifacts/Serialization</output-path>
-    <root id="archive" name="Serialization.jar">
-      <element id="module-output" name="Objektserialisierung" />
-    </root>
-  </artifact>
-</component>
