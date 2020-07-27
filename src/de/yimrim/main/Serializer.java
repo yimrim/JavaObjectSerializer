@@ -1,4 +1,6 @@
-package de.yimrim;
+package de.yimrim.main;
+
+import de.yimrim.main.DBConnection;
 
 import java.io.*;
 import java.sql.SQLException;
@@ -21,7 +23,7 @@ public class Serializer {
 
        YOUR CLASS HAS TO IMPLEMENT SERIALIZATION
 
-        USE FOLLOWING STRUCTUE FOR dbURL: "jdbc:mysql://ADRESS:PORT/DATABASENAME"
+        USE FOLLOWING STRUCTURE FOR dbURL: "jdbc:mysql://ADDRESS:PORT/DATABASENAME"
 
      */
 
@@ -86,7 +88,7 @@ public class Serializer {
         oos.writeObject(o);
 
         DBConnection dbConnection = new DBConnection(dbURL, dbUser, dbPassword);
-        dbConnection.insert(bos);
+        dbConnection.insert(bos, customID);
 
         oos.close();
         bos.close();
@@ -95,15 +97,13 @@ public class Serializer {
     public Object databaseDeserialize(int ID) throws IOException, ClassNotFoundException, SQLException {// returns an object from the database, by given ID(primary key from the database)
         DBConnection dbConnection = new DBConnection(dbURL, dbUser, dbPassword);
         ObjectInputStream ois = new ObjectInputStream(dbConnection.extract(ID));
-        Object object = ois.readObject();
-        return object;
+        return ois.readObject();
     }
 
     public Object databaseDeserialize(String customID) throws IOException, ClassNotFoundException, SQLException {// returns an object from the database, by given CustomID(primary key from the database)
         DBConnection dbConnection = new DBConnection(dbURL, dbUser, dbPassword);
         ObjectInputStream ois = new ObjectInputStream(dbConnection.extract(customID));
-        Object object = ois.readObject();
-        return object;
+        return ois.readObject();
     }
 
 
