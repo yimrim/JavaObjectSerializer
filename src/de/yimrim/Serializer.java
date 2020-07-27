@@ -5,7 +5,9 @@ import java.sql.SQLException;
 
 public class Serializer {
 
-    /* USE THIS TABLE STRUCTURE IN YOUR DATABASE
+    /*
+
+        USE THIS TABLE STRUCTURE IN YOUR DATABASE
 
                 create table objects
         (
@@ -18,6 +20,8 @@ public class Serializer {
         );
 
        YOUR CLASS HAS TO IMPLEMENT SERIALIZATION
+
+        USE FOLLOWING STRUCTUE FOR dbURL: "jdbc:mysql://ADRESS:PORT/DATABASENAME"
 
      */
 
