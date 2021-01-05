@@ -15,6 +15,6 @@ A Java library for object de-/serialization with database and file support
 
        YOUR CLASS HAS TO IMPLEMENT SERIALIZATION
 
-        USE FOLLOWING STRUCTUE FOR dbURL: "jdbc:mysql://ADRESS:PORT/DATABASENAME"
+        USE FOLLOWING STRUCTURE FOR dbURL: "jdbc:mysql://ADRESS:PORT/DATABASENAME"
         
         You need to use a suitable database library (i used the official mysql connector)
